@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { ActivatedRoute } from "@angular/router";
 
 @Component({
   selector: 'app-portafolio-item',
   templateUrl: './portafolio-item.component.html',
   styles: []
 })
-export class PortafolioItemComponent implements OnInit {
+export class PortafolioItemComponent {
 
-  constructor() { }
+  constructor(private route:ActivatedRoute) {
 
-  ngOnInit() {
-  }
-
+    route.params.subscribe (
+      parameters =>{
+        console.log(parameters);
+        console.log(parameters['id']);
+      });
+   }
 }
