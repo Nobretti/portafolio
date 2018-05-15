@@ -26,9 +26,9 @@ export class InformationService {
   public load_over_us(){
     this.http.get("https://web-page-33deb.firebaseio.com/team.json")
              .subscribe(data => {
-               console.log(data.json());
-               this.load = true;
-               this.info = data.json();
+               //console.log(data.json());
+               this.loadOverUs = true;
+               this.team = data.json();
              });
   }
 }
